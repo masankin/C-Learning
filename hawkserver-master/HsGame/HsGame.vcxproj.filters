@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{7983b7b5-4c3f-4260-9516-297b37e1e785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{899a537c-eb9e-4054-a7ae-88b02cc1e28d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{50e009aa-a308-428e-9e52-0bc202d984fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{60c3b2f8-7120-41df-a964-1a11443ca317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\modules">
+      <UniqueIdentifier>{6dbdc301-35bf-4d02-be5c-83ea075c597f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol\xml">
+      <UniqueIdentifier>{60bcdbe0-fa05-4026-8ff6-c02a6a330898}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="HsGame.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayer.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayerModule.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayerMsg.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayerProto.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayerData.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="HsPlayerLoginModule.cpp">
+      <Filter>player\modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HsGame.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="HsPlayer.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="HsPlayerModule.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="HsPlayerData.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="HsGameDef.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="HsPlayerLoginModule.h">
+      <Filter>player\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\cpp\ErrorCode.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\cpp\GsProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\cpp\ProtocolId.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\cpp\StdProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="..\Protocol\ProtocolGen.exe">
+      <Filter>protocol\xml</Filter>
+    </None>
+    <None Include="..\Protocol\HsProtocol.xml">
+      <Filter>protocol\xml</Filter>
+    </None>
+    <None Include="..\Protocol\cpp\ProtocolReg.inl">
+      <Filter>protocol</Filter>
+    </None>
+  </ItemGroup>
+</Project>

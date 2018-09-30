@@ -1,0 +1,64 @@
+<!-- ===========================协议格式定义===========================	-->
+<!-- //xml special words:(&, &amp;),(<, &lt;),(>, &gt;),(", &quot;)		-->
+<!-- Name: 变量名称, Type: 变量类型										-->
+<ProtocolGen ProtocolIdFile = "ProtocolId" ProtocolRegFile = "ProtocolReg" Package = "org.hawk.game.protocol">
+	<!--错误Id定义表-->
+	<GenFile Name = "ErrorCode">		
+		<IdSpace Space = "LoginErr" Desc = "登陆模块错误码[100-150]">
+			<Id Macro = "NAME_INVALID" Value = "100" Desc = "用户名非法"/>
+			<Id Macro = "NAME_ERROR" Value = "101" Desc = "用户名错误"/>
+			<Id Macro = "PWD_ERROR" Value = "102" Desc = "密码错误"/>			
+		</IdSpace>
+	</GenFile>
+
+	<!--通用协议[100-200)-->
+	<GenFile Name = "StdProtocol" Include = "ProtocolId,ErrorCode">
+		<Protocol Name = "ErrNotify" Id = "100" Macro = "ERR_NOTIFY" Desc = "错误通知">
+			<Var Name = "m_iErrId" Type = "UInt16"/>
+			<Var Name = "m_iMode" Type = "Int8"/>
+		</Protocol>
+		
+		<Protocol Name = "MsgNotify" Id = "101" Macro = "MSG_NOTIFY" Desc = "消息通知">
+			<Var Name = "m_sMsg" Type = "UString"/>
+			<Var Name = "m_iMode" Type = "Int8"/>
+		</Protocol>
+		
+		<Protocol Name = "TimeSync" Id = "102" Macro = "TIME_SYNC" Desc = "时间同步">
+			<Var Name = "m_iTime" Type = "UInt32"/>
+		</Protocol>
+	</GenFile>
+	
+	<!--GS处理协议-->
+	<GenFile Name = "GsProtocol" Include = "StdProtocol">
+		<!--角色信息-->
+		<Marshal Name = "PlayerInfo">
+			<Var Name = "m_iPlayerId" Type = "UInt32"/>
+			<Var Name = "m_sNickName" Type = "UString"/>
+			<Var Name = "m_iGender" Type = "UInt8"/>
+		</Marshal>
+		
+		<!--玩家登陆-->
+		<Protocol Name = "LoginGame" Id = "200" Macro = "LOGIN_GAME" Desc = "登入游戏">
+			<Var Name = "m_sName" Type = "UString"/>
+			<Var Name = "m_sPwd" Type = "UString"/>
+			<Var Name = "m_iFlag" Type = "UInt8"/>
+		</Protocol>
+		
+		<!--玩家被踢出游戏-->
+		<Protocol Name = "KickoutGame" Id = "201" Macro = "KICKOUT_GAME" Desc = "踢出游戏">
+			<Var Name = "m_iPlayerId" Type = "UInt32"/>
+			<Var Name = "m_sName" Type = "UString"/>
+		</Protocol>	
+		
+		<!--玩家信息初始化-->
+		<Protocol Name = "PlayerInit" Id = "202" Macro = "PLAYER_INIT" Desc = "玩家初始化">
+			<Var Name = "m_sInfo" Type = "PlayerInfo"/>
+		</Protocol>
+		
+		<!--玩家所要信息同步完成-->
+		<Protocol Name = "PlayerAssembly" Id = "203" Macro = "PLAYER_ASSEMBLY" Desc = "同步数据完成">
+			<Var Name = "m_iPlayerId" Type = "UInt32"/>
+			<Var Name = "m_iSvrId" Type = "UInt32"/>
+		</Protocol>
+	</GenFile>
+</ProtocolGen>

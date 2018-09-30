@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{4d1f8154-b714-4446-a91d-5c594ce3896a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robot">
+      <UniqueIdentifier>{89984d60-8ae6-424e-82cf-6cca0e345358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{d2d972fa-6d00-4cc0-bb62-95468d769c3c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HsRobot.cpp">
+      <Filter>robot</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="HsRobotEntity.cpp">
+      <Filter>robot</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HsRobot.h">
+      <Filter>robot</Filter>
+    </ClInclude>
+    <ClInclude Include="HsRobotEntity.h">
+      <Filter>robot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\ErrorCode.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\GsProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\ProtocolId.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protocol\StdProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="..\Protocol\HsProtoReg.inl">
+      <Filter>protocol</Filter>
+    </None>
+  </ItemGroup>
+</Project>

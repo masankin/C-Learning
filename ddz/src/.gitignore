@@ -1,0 +1,80 @@
+*.swp
+allkill/allkill
+allkill/tags
+beauty/beauty
+beauty/tags
+lottery/lottery
+lottery/tags
+lottery/test/lottery_client
+party/party
+party/tags
+robot/robots
+robot/tags
+speaker/speaker
+speaker/tags
+zjhsvr/zjhsvr
+zjhsvr/tags
+libzjh/tags
+hlddz/tags
+hlddz_robot/tags
+libddz/tags
+libddz/test/tags
+liblzddz/tags
+liblzddz/test/tags
+lzddz/tags
+lzddz_robot/tags
+bsddz/tags
+bsddz_robot/tags
+allkill/tags
+
+grab_bull/grab_bull
+grab_robot/grab_robot
+libbull/libbull
+normal_bull/normal_bull
+normal_robot/normal_robot
+secret_venue/secret_venue
+libzjh/libzjh
+zjhsvr/zjhsvr
+hlddz/hlddz
+hlddz_robot/hlddz_robot
+libddz/test/shuffleDeckTest
+liblzddz/test/test
+lzddz/lzddz
+lzddz_robot/lzddz_robot
+bsddz/bsddz
+bsddz_robot/bsddz_robot
+allkill/test/roleclient
+allkill/test/betclient
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

@@ -1,0 +1,11 @@
+#build 
+/Debug
+
+#setting
+/.settings
+/.metadata
+
+# misc
+.DS_Store
+.cproject
+.project
